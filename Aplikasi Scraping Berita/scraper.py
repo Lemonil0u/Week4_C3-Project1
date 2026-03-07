@@ -2,6 +2,7 @@ import time
 import re
 import random
 import logging
+from selenium.webdriver.chrome.webdriver import WebDriver
 from datetime import datetime
 from urllib.parse import urljoin, urlparse
 from concurrent.futures import ThreadPoolExecutor, as_completed
@@ -72,7 +73,7 @@ class NewsScraper:
 
         service = Service(ChromeDriverManager().install())
 
-        return webdriver.Chrome(
+        return WebDriver(
             service=service,
             options=chrome_options
         )

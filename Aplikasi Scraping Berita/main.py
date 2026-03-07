@@ -1,6 +1,6 @@
 import sys
 import logging
-from gui import NewsGUI
+from GUI import NewsGUI
 from utils import setup_logger
 
 def main():
